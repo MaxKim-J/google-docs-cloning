@@ -1,0 +1,94 @@
+{% extends 'products/base.html' %}
+
+{% block content %}
+<div class="container-fluid m-0 p-0">
+    <section class="row m-0" id="section-1">
+        <div class="col-12 p-0 d-flex align-items-center justify-content-center">
+            <div class="section-wraper-1">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-end">
+                        <span class="name_tag">수현</span>
+                    </div>
+                </div>
+                <div class="row home-main-row">
+                    <div class="col-12 text-center">
+                        <h1 class="title text-center">인상적인 문서 만들기</h1>
+                        <span class="stick"></span>
+                        <h3 class="sm-title">멋진 프레젠테이션 만들기</h3>
+                    </div>
+                </div>
+                <div class="row home-card-row">
+                    <div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-lg-end p-0">
+                        <div class="home-card card">
+                            <h2 class="title text-center">개인</h2>
+                            <div class="image text-center">
+                                <img src="https://www.google.com/images/about/docs-icon.svg">
+                            </div>
+                            <p class="description text-center">Google 문서로 어디서나 문서를 작성, 수정하고 공동작업을 진행해 보세요. 무료로 이용하실 수
+                                있습니다.
+                            </p>
+                            <a class="link text-center mx-auto">Google 문서로 이동하기</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-lg-start p-0">
+                        <div class="home-card card">
+                            <h2 class="title text-center">기업</h2>
+                            <dvi class="image text-center">
+                                <img src="https://www.google.com/images/about/gsuite-logo.svg">
+                            </dvi>
+                            <p class="description text-center">Google 문서에 한층 강화된 보안 및 팀을 위한 관리 기능이 더해졌습니다.</p>
+                            <a class="link text-center mx-auto">자세히 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row arrow d-flex justify-content-center m-0">
+                    <a><i class="fas fa-chevron-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row" id="section-5">
+        <div class="col-6 text-wrap">
+            <h2 class="title">'저장' 버튼은 이제 안녕</h2>
+            <p class="description">모든 변경사항이 입력 즉시 자동으로 저장될 뿐만 아니라 업데이트 기록을 통해 문서의 이전 버전을 날짜와 변경한 사용자 기준으로
+                정렬하여
+                확인할 수 있습니다.</p>
+        </div>
+        <div class="col-6 d-flex align-items-center justify-content-center">
+            <div class="paper">
+                <div class="line line-100"></div>
+                <div class="line line-90"></div>
+                <div class="line line-100"></div>
+                <div class="line line-60"></div><div class="bar"></div>
+            </div>
+            <div class="check-icon d-flex align-items-center justify-content-center"><i class="fas fa-check"></i></div>
+        </div>
+    </section>
+
+    <div style="height: 1000px"></div>
+</div>
+<script>
+    $(window).ready(function () {
+
+        var max = 320; //100% 투명할때의 스크롤 값
+
+        $(window).scroll(function () {
+
+            var scrollPX = $(this).scrollTop();
+
+            if (scrollPX < max) {
+
+                $(".section-wraper-1").css({ "opacity": (max - scrollPX) / max });
+
+            } else {
+
+                $(".section-wraper-1").css({ "opacity": 0 });
+
+            }
+
+        });
+
+    }); 
+</script>
+{% endblock %}
