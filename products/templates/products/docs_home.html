@@ -1,6 +1,7 @@
 {% extends 'products/base.html' %}
 
 {% block content %}
+{% load static %}
 <div class="container-fluid m-0 p-0">
     <section class="row m-0" id="section-1">
         <div class="col-12 p-0 d-flex align-items-center justify-content-center">
@@ -48,6 +49,55 @@
         </div>
     </section>
 
+    <!-- 2번 -->
+    <div class="row mainrow-2">
+        <div class="wrapper-2-1">
+            <div class="wrapper-2-2">
+                <div class="block2-1">
+                    <div class="animation2">
+                        <img src="{% static 'pad2.gif' %}" alt="">
+                    </div>
+                </div>
+                <div class="block2-2">
+                    <h2 class="font2-1">글자 그 이상의 문서</h2>
+                    <p class="font2-2">텍스트나 단락의 서식을 손쉽게 지정할 수 있도록 도와주는 Google 문서의 스마트한 수정 및 스타일 도구를 이용하여 문서에 생동감을 불어넣어
+                        보세요. 수백 가지의 글꼴 중에 마음에 드는 것을 선택하고, 링크, 이미지, 그림을 자유롭게 추가할 수 있습니다. 물론, 이 모든 게 무료입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 3번 -->
+    <div class="row mainrow-3">
+        <div class="wrapper-3">
+            <div class="block3-1">
+                <div class="row">
+                    <h2 style="font-weight: 300;">언제 어디서든 문서 보기</h2>
+                </div>
+                <div class="row">
+                    <p class="s-fontcolor">스마트폰, 태블릿, 컴퓨터로 어디서든지 문서를 만들고 수정해 보세요. 오프라인에서도 가능합니다.</p>
+                </div>
+                <div class="row l-10">
+                    <a class="btn-custom-2"
+                        href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Dwebsite%26utm_content%3Dmobilebutton%26utm_campaign%3Ddocswebsite&hl=ko"><span
+                            class="font3-4">Google 문서 다운로드</span></a>
+                    <div class="dropdown">
+                        <button id="change" class="btn-custom-1 btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <change-title class="font3-3">앱다운로드</change-title>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Ddocs_mkt%26utm_medium%3Dmobile_section%26utm_campaign%3Ddocs_mkt">Android용 문서 다운로드</a>
+                            <a class="dropdown-item" href="https://apps.apple.com/app/apple-store/id842842640">iPhon/iPad용 문서 다운로드</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block3-2">
+                <img class="img-3 " src="https://www.google.com/intl/ko_KR/docs/about/images/en/download.png" alt="">
+            </div>
+        </div>
+    </div>
+
     <section class="row" id="section-5">
         <div class="col-6 text-wrap">
             <h2 class="title">'저장' 버튼은 이제 안녕</h2>
@@ -60,13 +110,59 @@
                 <div class="line line-100"></div>
                 <div class="line line-90"></div>
                 <div class="line line-100"></div>
-                <div class="line line-60"></div><div class="bar"></div>
+                <div class="line line-60"></div>
+                <div class="bar"></div>
             </div>
             <div class="check-icon d-flex align-items-center justify-content-center"><i class="fas fa-check"></i></div>
         </div>
     </section>
 
     <div style="height: 1000px"></div>
+    <!-- 7번!!!!!!! -->
+    <div class="row mainrow-7">
+        <div class="wrapper-7-1">
+            <div class="wrapper-7-2">
+                <div class="block7-1">
+                    <div class="animation7">
+                        <img src="{% static 'pad.gif' %}" alt="">
+                    </div>
+                </div>
+                <div class="block7-2">
+                    <h2 class="font7-1">원하는 모든 정보를 문서에서 바로 검색하세요.</h2>
+                    <p class="font7-2">Android 앱을 종료하지 않고<br> Google 검색에서 이미지, 인용문, 텍스트를 탐색하고 영감을 얻어보세요.</p>
+                    <a class="btn-custom7-2"
+                        href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&hl=ko"><span>Android용
+                            문서 다운로드</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 8번!!!!!! -->
+    <div class="row mainrow-8">
+        <div class="wrapper-8">
+            <div class="block8-1">
+                <div class="row">
+                    <p class="font8-1">부가기능으로 더 세련되게</p>
+                </div>
+                <div class="row">
+                    <p class="font8-2">
+                        부가기능으로 더 멋진 문서를 만들 수 있습니다. <a
+                            href="https://chrome.google.com/webstore/detail/avery-label-merge/onacejilpbdgdhhoijnggpjolbdajepo">
+                            Avery Label Merge</a>로 라벨과 이름 태그를 만들고 인쇄해 보세요.
+                    </p>
+
+                </div>
+                <div class="row">
+                    <a class="font8-3" href="https://docs.google.com/document/create?addon_store">다른 부가기능 살펴보기
+                        <i class="material-icons">keyboard_arrow_right</i></a>
+                </div>
+            </div>
+            <div class="block8-2">
+                <img class="img-3 img-8" src="https://www.google.com/intl/ko_KR/docs/about/images/docs/addons.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     $(window).ready(function () {
