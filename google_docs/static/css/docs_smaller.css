@@ -95,25 +95,28 @@
     /* hamburger menu list */
     
     .section-main-list {
-        display: none;
         background-color: #e5e5e5;
-        position: relative;
+        display: none;
+        position: fixed;
         top:70px;
         height: 100%;
+        width:100%;
+        padding: 20px 0px;
     }
     
     .section-main-list-content{
-        padding: 30px 20px;
+        padding: 10px 20px;
     }
     
     .section-main-list-content >img{
         position: relative;
-        top: 10px;
         height: 50px;
         width: auto;
     }
     
     .section-main-list-content > a{
+        position: relative;
+        top: 10px;
         font-size: 25px;
     }
 
