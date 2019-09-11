@@ -2,5 +2,16 @@
 {% load static %}
 
 {% block content %}
+<div class="window-section-1" data-parallax="scroll" data-image-src="https://www.google.com/intl/ko_KR/docs/about//images/docs/banner-1600.jpg"></div>
+<div style="border: 1px solid #000000; width:100%; height:1000px;"></div>
+<script>
+$('.window-section-1').parallax({imageSrc: 'https://www.google.com/intl/ko_KR/docs/about//images/docs/banner-1600.jpg'});
+</script>
 
+<style>
+.window-section-1 {
+    min-height: 400px;
+    background: transparent;
+}
+</style>
 {% endblock %}
