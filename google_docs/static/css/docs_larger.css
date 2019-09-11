@@ -50,6 +50,21 @@
         top: 6px;
     }
 
+    .header-left-box-title > a:hover {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .header-left-box-title > a:visited {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .header-left-box-title > a:link {
+        text-decoration: none;
+        color: grey;
+    }
+
     #spread:hover + #spreadColor {
         background-color: #21A565;
     }
