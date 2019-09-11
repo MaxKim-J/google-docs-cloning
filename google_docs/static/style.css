@@ -167,10 +167,11 @@ body {
 }
 
 #section-5 .paper .line-60 {
-    width : 60%;
     display : inline-block;
+    animation-delay: 1s;
     animation-duration: 1.5s;
     animation-name: line-slide;
+    animation-fill-mode: forwards;
 }
 
 @keyframes line-slide {
@@ -201,7 +202,7 @@ body {
     position : relative;
     right : 269px;
     top : 113px;
-    animation-delay: 1.5s;
+    animation-delay: 2.5s;
     animation-duration: 0.01s;
     animation-name: check-show;
     opacity: 0;
