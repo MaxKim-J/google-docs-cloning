@@ -2,373 +2,523 @@
 
 {% block content %}
 {% load static %}
-<div class="container-fluid m-0 p-0">
-    <section class="row m-0" id="section-1">
-        <div class="col-12 p-0 d-flex align-items-center justify-content-center">
-            <div class="section-wraper-1">
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-end">
-                        <span class="name_tag">수현</span>
+
+<div class=header>
+    <div class="header-logo">
+        <img src="{% static 'img/Screenshot from 2019-09-09 20-27-02.png' %}">
+    </div>
+
+    <div class="header-left">
+        <div class="header-left-box">
+            <div class="header-left-box-title">
+                <img src="https://www.google.com/images/about/docs-icon.svg">&nbsp;
+                <a href="#">문서</a>
+            </div>
+            <div class="header-left-box-color-active"></div>
+        </div>
+        <div class="header-left-box">
+            <div class="header-left-box-title" id="spread">
+                <img src="https://www.google.com/images/about/sheets-icon.svg">&nbsp;
+                <a href="#">스프레드시트</a>
+            </div>
+            <div class="header-left-box-color" id="spreadColor"></div>
+        </div>
+        <div class="header-left-box">
+            <div class="header-left-box-title" id="presentation">
+                <img src="https://www.google.com/images/about/slides-icon.svg">&nbsp;
+                <a href="#">프레젠테이션</a>
+            </div>
+            <div class="header-left-box-color" id="presentationColor"></div>
+        </div>
+        <div class="header-left-box">
+            <div class="header-left-box-title" id="query">
+                <img src="https://www.google.com/images/about/forms-icon.svg">&nbsp;
+                <a href="#">설문지</a>
+            </div>
+            <div class="header-left-box-color" id="queryColor"></div>
+        </div>
+    </div>
+
+    <div class="header-right">
+        <div id="js-header-right-popout"></div>
+        <div class="header-right-content">기업용</div>
+        <div class="header-right-content">도움말</div>
+    </div>
+
+    <div class="header-right-icon">
+        <div class="header-right-icon-wrap" onclick="menuExpose();">
+            <img src="{% static 'img/Hamburger_icon.png' %}" id="js-icon">
+        </div>
+    </div>
+</div>
+
+<div class="section-main-list" id="js-popup">
+    <div class="section-main-list-content">
+        <img src="https://www.google.com/images/about/docs-icon.svg">&nbsp;
+        <a href="#">문서</a>
+    </div>
+    <hr/>
+    <div class="section-main-list-content">
+        <img src="https://www.google.com/images/about/sheets-icon.svg">&nbsp;
+        <a href="#">스프레드시트</a>
+    </div>
+    <hr/>
+    <div class="section-main-list-content">
+        <img src="https://www.google.com/images/about/slides-icon.svg">&nbsp;
+        <a href="#">프레젠테이션</a>
+    </div>
+    <hr/>
+    <div class="section-main-list-content">
+        <img src="https://www.google.com/images/about/forms-icon.svg">&nbsp;
+        <a href="#">설문지</a>
+    </div>
+    <hr/>
+    <div class="section-main-list-content">
+        <a href="#">기업용</a>
+    </div>
+    <hr/>
+    <div class="section-main-list-content">
+        <a href="#">도움말</a>
+    </div>
+    <hr/>
+</div>
+
+<div class="wrap-js">
+    <div class="container-fluid m-0 p-0">
+        <section class="row m-0" id="section-1">
+            <div class="col-12 p-0 d-flex align-items-center justify-content-center">
+                <div class="section-wraper-1">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end">
+                            <span class="name_tag">수현</span>
+                        </div>
                     </div>
-                </div>
-                <div class="row home-main-row">
-                    <div class="col-12 text-center">
-                        <h1 class="title text-center">인상적인 문서 만들기</h1>
-                        <span class="stick"></span>
-                        <h3 class="sm-title">멋진 프레젠테이션 만들기</h3>
+                    <div class="row home-main-row">
+                        <div class="col-12 text-center">
+                            <h1 class="title text-center">인상적인 문서 만들기</h1>
+                            <span class="stick"></span>
+                            <h3 class="sm-title">멋진 프레젠테이션 만들기</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="row home-card-row">
-                    <div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-lg-end p-0">
-                        <div class="home-card card">
-                            <h2 class="title text-center">개인</h2>
-                            <div class="image text-center">
-                                <img src="https://www.google.com/images/about/docs-icon.svg">
+                    <div class="row home-card-row">
+                        <div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-lg-end p-0">
+                            <div class="home-card card">
+                                <h2 class="title text-center">개인</h2>
+                                <div class="image text-center">
+                                    <img src="https://www.google.com/images/about/docs-icon.svg">
+                                </div>
+                                <p class="description text-center">Google 문서로 어디서나 문서를 작성, 수정하고 공동작업을 진행해 보세요. 무료로 이용하실
+                                    수
+                                    있습니다.
+                                </p>
+                                <a class="link text-center mx-auto">Google 문서로 이동하기</a>
                             </div>
-                            <p class="description text-center">Google 문서로 어디서나 문서를 작성, 수정하고 공동작업을 진행해 보세요. 무료로 이용하실 수
+                        </div>
+                        <div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-lg-start p-0">
+                            <div class="home-card card">
+                                <h2 class="title text-center">기업</h2>
+                                <dvi class="image text-center">
+                                    <img src="https://www.google.com/images/about/gsuite-logo.svg">
+                                </dvi>
+                                <p class="description text-center">Google 문서에 한층 강화된 보안 및 팀을 위한 관리 기능이 더해졌습니다.</p>
+                                <a class="link text-center mx-auto">자세히 알아보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row arrow d-flex justify-content-center m-0">
+                        <a href="#section-2"><i class="fas fa-chevron-down"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2번 -->
+        <div class="row mainrow-2" id="section-2">
+            <div class="wrapper-2-1">
+                <div class="wrapper-2-2">
+                    <div class="block2-1">
+                        <div class="animation2">
+                            <img src="{% static 'pad2.gif' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="block2-2">
+                        <h2 class="font2-1">글자 그 이상의 문서</h2>
+                        <p class="font2-2">텍스트나 단락의 서식을 손쉽게 지정할 수 있도록 도와주는 Google 문서의 스마트한 수정 및 스타일 도구를 이용하여 문서에 생동감을
+                            불어넣어
+                            보세요. 수백 가지의 글꼴 중에 마음에 드는 것을 선택하고, 링크, 이미지, 그림을 자유롭게 추가할 수 있습니다. 물론, 이 모든 게 무료입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 3번 -->
+        <div class="row mainrow-3">
+            <div class="wrapper-3">
+                <div class="block3-1">
+                    <div class="row">
+                        <h2 style="font-weight: 300;">언제 어디서든 문서 보기</h2>
+                    </div>
+                    <div class="row">
+                        <p class="s-fontcolor">스마트폰, 태블릿, 컴퓨터로 어디서든지 문서를 만들고 수정해 보세요. 오프라인에서도 가능합니다.</p>
+                    </div>
+                    <div class="row l-10">
+                        <a class="btn-custom-2"
+                           href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Dwebsite%26utm_content%3Dmobilebutton%26utm_campaign%3Ddocswebsite&hl=ko"><span
+                                class="font3-4">Google 문서 다운로드</span></a>
+                        <div class="dropdown">
+                            <button id="change" class="btn-custom-1 btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                <change-title class="font3-3">앱다운로드</change-title>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item"
+                                   href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Ddocs_mkt%26utm_medium%3Dmobile_section%26utm_campaign%3Ddocs_mkt">Android용
+                                    문서 다운로드</a>
+                                <a class="dropdown-item"
+                                   href="https://apps.apple.com/app/apple-store/id842842640">iPhon/iPad용 문서 다운로드</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block3-2">
+                    <img class="img-3 " src="https://www.google.com/intl/ko_KR/docs/about/images/en/download.png"
+                         alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 4번 -->
+        <div class="row s-row together">
+            <div class="col-6 d-none d-md-inline-block together_imgdiv">
+                <div id="imgtab">
+                    <img src="{% static 'together_list_1.gif' %}">
+                </div>
+                <div id="imgtab1">
+                    <img src="{% static 'together_list_2.png' %}" alt="">
+                </div>
+                <div id="imgtab2">
+                    <img src="{% static 'together_list_3.gif' %}" alt="">
+                </div>
+                <div id="imgtab3">
+                    <img src="{% static 'together_list_4.gif' %}" alt="">
+                </div>
+            </div>
+            <div class="col-6 d-none d-md-inline-block">
+                <h2 class="headline">다같이, 더많이</h2>
+                <p id="together_p">Google 문서를 사용하면 모두가 함께, 한 문서에서 동시에 작업을 진행할 수 있습니다.</p>
+                <div class="wrapper">
+                    <ul class="tabs">
+                        <li id="li1" rel="tab1">모든 사람과 공유</li>
+                        <li id="tab1">
+                            <div class="tab_title">모든 사람과 공유</div>
+                            <div class="tab_content">
+                                공유를 클릭하면 지인, 학교 친구, 동료, 가족 등이 내가 공유한 문서를 보고 직접 문서를 수정하거나 제안할 수 있으며 나는 이 제안을 수락 또는 거부할 수
                                 있습니다.
-                            </p>
-                            <a class="link text-center mx-auto">Google 문서로 이동하기</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-lg-start p-0">
-                        <div class="home-card card">
-                            <h2 class="title text-center">기업</h2>
-                            <dvi class="image text-center">
-                                <img src="https://www.google.com/images/about/gsuite-logo.svg">
-                            </dvi>
-                            <p class="description text-center">Google 문서에 한층 강화된 보안 및 팀을 위한 관리 기능이 더해졌습니다.</p>
-                            <a class="link text-center mx-auto">자세히 알아보기</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row arrow d-flex justify-content-center m-0">
-                    <a href="#section-2"><i class="fas fa-chevron-down"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2번 -->
-    <div class="row mainrow-2" id="section-2">
-        <div class="wrapper-2-1">
-            <div class="wrapper-2-2">
-                <div class="block2-1">
-                    <div class="animation2">
-                        <img src="{% static 'pad2.gif' %}" alt="">
-                    </div>
-                </div>
-                <div class="block2-2">
-                    <h2 class="font2-1">글자 그 이상의 문서</h2>
-                    <p class="font2-2">텍스트나 단락의 서식을 손쉽게 지정할 수 있도록 도와주는 Google 문서의 스마트한 수정 및 스타일 도구를 이용하여 문서에 생동감을 불어넣어
-                        보세요. 수백 가지의 글꼴 중에 마음에 드는 것을 선택하고, 링크, 이미지, 그림을 자유롭게 추가할 수 있습니다. 물론, 이 모든 게 무료입니다.</p>
+                            </div>
+                        </li>
+                        <li id="li2" rel="tab2">실시간 수정</li>
+                        <li id="tab2">
+                            <div class="tab_title">실시간 수정</div>
+                            <div class="tab_content">
+                                다른 사용자가 문서를 수정할 때 커서가 표시되어 무엇을 변경하고 어떤 텍스트를 강조표시하는지 확인할 수 있습니다.
+                            </div>
+                        </li>
+                        <li id="li3" rel="tab3">채팅 및 댓글 달기</li>
+                        <li id="tab3">
+                            <div class="tab_title">채팅 및 댓글 달기</div>
+                            <div class="tab_content">
+                                문서 내에서 직접 다른 사용자와 채팅하거나, 댓글을 추가하고 '+'를 눌러 상대방의 이메일 주소를 입력하여 상대방에게 알림을 보낼 수 있습니다.
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- 3번 -->
-    <div class="row mainrow-3">
-        <div class="wrapper-3">
-            <div class="block3-1">
-                <div class="row">
-                    <h2 style="font-weight: 300;">언제 어디서든 문서 보기</h2>
-                </div>
-                <div class="row">
-                    <p class="s-fontcolor">스마트폰, 태블릿, 컴퓨터로 어디서든지 문서를 만들고 수정해 보세요. 오프라인에서도 가능합니다.</p>
-                </div>
-                <div class="row l-10">
-                    <a class="btn-custom-2"
-                        href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Dwebsite%26utm_content%3Dmobilebutton%26utm_campaign%3Ddocswebsite&hl=ko"><span
-                            class="font3-4">Google 문서 다운로드</span></a>
-                    <div class="dropdown">
-                        <button id="change" class="btn-custom-1 btn btn-primary dropdown-toggle" type="button"
-                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <change-title class="font3-3">앱다운로드</change-title>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item"
-                                href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Ddocs_mkt%26utm_medium%3Dmobile_section%26utm_campaign%3Ddocs_mkt">Android용
-                                문서 다운로드</a>
-                            <a class="dropdown-item"
-                                href="https://apps.apple.com/app/apple-store/id842842640">iPhon/iPad용 문서 다운로드</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="block3-2">
-                <img class="img-3 " src="https://www.google.com/intl/ko_KR/docs/about/images/en/download.png" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- 4번 -->
-    <div class="row s-row together">
-        <div class="col-6 d-none d-md-inline-block together_imgdiv">
-            <div id="imgtab">
-                <img src="{% static 'together_list_1.gif' %}">
-            </div>
-            <div id="imgtab1">
-                <img src="{% static 'together_list_2.png' %}" alt="">
-            </div>
-            <div id="imgtab2">
-                <img src="{% static 'together_list_3.gif' %}" alt="">
-            </div>
-            <div id="imgtab3">
-                <img src="{% static 'together_list_4.gif' %}" alt="">
-            </div>
-        </div>
-        <div class="col-6 d-none d-md-inline-block">
-            <h2 class="headline">다같이, 더많이</h2>
-            <p id="together_p">Google 문서를 사용하면 모두가 함께, 한 문서에서 동시에 작업을 진행할 수 있습니다.</p>
-            <div class="wrapper">
-                <ul class="tabs">
-                    <li id="li1" rel="tab1">모든 사람과 공유</li>
-                    <li id="tab1">
-                        <div class="tab_title">모든 사람과 공유</div>
-                        <div class="tab_content">
-                            공유를 클릭하면 지인, 학교 친구, 동료, 가족 등이 내가 공유한 문서를 보고 직접 문서를 수정하거나 제안할 수 있으며 나는 이 제안을 수락 또는 거부할 수
-                            있습니다.
-                        </div>
-                    </li>
-                    <li id="li2" rel="tab2">실시간 수정</li>
-                    <li id="tab2">
-                        <div class="tab_title">실시간 수정</div>
-                        <div class="tab_content">
-                            다른 사용자가 문서를 수정할 때 커서가 표시되어 무엇을 변경하고 어떤 텍스트를 강조표시하는지 확인할 수 있습니다.
-                        </div>
-                    </li>
-                    <li id="li3" rel="tab3">채팅 및 댓글 달기</li>
-                    <li id="tab3">
-                        <div class="tab_title">채팅 및 댓글 달기</div>
-                        <div class="tab_content">
-                            문서 내에서 직접 다른 사용자와 채팅하거나, 댓글을 추가하고 '+'를 눌러 상대방의 이메일 주소를 입력하여 상대방에게 알림을 보낼 수 있습니다.
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
 
 
-        <!--4번 반응형-->
+            <!--4번 반응형-->
 
-        <div id="slide" class="d-inline-block d-md-none">
-            <input type="radio" name="pos" id="pos1" checked>
-            <input type="radio" name="pos" id="pos2">
-            <input type="radio" name="pos" id="pos3">
-            <input type="radio" name="pos" id="pos4">
-            <ul>
-                <li>
-                    <div>
-                        <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfMTMg/MDAxNTY3NzU0NTAxMjI5.GVpO-6waTGmErqsUKiaVymjz5mNYMBjnnj1yYXeY4JYg.Oqwd7Rrz8_quvrryN1GQiun1oVOq0LUZT0qjKcplBTAg.PNG.2002airplane/together_slide_1.png?type=w773"
-                            alt="">
-                        <div class="tab_title">다같이, 더많이</div>
-                        <div class="tab_content">
-                            Google 문서를 사용하면 모두가 함께, 한 문서에서 동시에 작업을 진행할 수 있습니다.
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfMTYx/MDAxNTY3NzU0NTEwMjI4.49pE4wb5baW9UbkCw5r1rEQdDZlzvGOSXREgRf87Vd8g.ffd8MG98w0qPUm77JZbqh8WJYRj_H-IhYWAPg9P41CUg.PNG.2002airplane/together_slide_2.png?type=w773"
-                            alt="">
-                        <div class="tab_title">모든 사람과 공유</div>
-                        <div class="tab_content">
-                            공유를 클릭하면 지인, 학교 친구, 동료, 가족 등이 내가 공유한 문서를 보고 직접 문서를 수정하거나 제안할 수 있으며 나는 이 제안을 수락 또는 거부할 수
-                            있습니다.
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfNDAg/MDAxNTY3NzU0NTE2NjQz.HYI2l6-_MSR-8QuwEX9AsS_-Ap8nDLdOzP5AYaiXbIMg.ec1rBXV31VCubl7FBj9iW8kia8HF7VWWtMkFim_gfe0g.PNG.2002airplane/together_slide_3.png?type=w773"
-                            alt="">
-                        <div class="tab_title">실시간 수정</div>
-                        <div class="tab_content">
-                            다른 사용자가 문서를 수정할 때 커서가 표시되어 무엇을 변경하고 어떤 텍스트를 강조표시하는지 확인할 수 있습니다.
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfNjcg/MDAxNTY3NzU0NTIzNjE5.sAJTo8aCz-FdOXcC8NtwTwOvWBqptfH0ME4-Mjgn-6Qg.DI9gH0vz-do902pULi19uz0fgvf5yAnhT1L6dLP4sNAg.PNG.2002airplane/together_slide_4.png?type=w773"
-                            alt="">
-                        <div class="tab_title">채팅 및 댓글 달기</div>
-                        <div class="tab_content">
-                            문서 내에서 직접 다른 사용자와 채팅하거나, 댓글을 추가하고 '+'를 눌러 상대방의 이메일 주소를 입력하여 상대방에게 알림을 보낼 수 있습니다.
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <p class="pos">
-                <label for="pos1"></label>
-                <label for="pos2"></label>
-                <label for="pos3"></label>
-                <label for="pos4"></label>
-            </p>
-        </div>
-
-    </div>
-
-    <section class="row" id="section-5">
-        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
-            <div class="paper">
-                <div class="line line-100"></div>
-                <div class="line line-90"></div>
-                <div class="line line-100"></div>
-                <div class="line line-60"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="check-icon d-flex align-items-center justify-content-center"><i class="fas fa-check"></i></div>
-        </div>
-        <div class="col-12 col-md-6 text-wrap">
-            <h2 class="title">'저장' 버튼은 이제 안녕</h2>
-            <p class="description">모든 변경사항이 입력 즉시 자동으로 저장될 뿐만 아니라 업데이트 기록을 통해 문서의 이전 버전을 날짜와 변경한 사용자 기준으로
-                정렬하여
-                확인할 수 있습니다.</p>
-        </div>
-
-    </section>
-
-    <!-- 6번 -->
-    <div class="row s-row wordcom d-none d-md-flex">
-        <div class="col-12 box12">
-            <h2 class="headline">Word와 호환</h2>
-        </div>
-
-        <div class="col-1"></div>
-        <div class="col-10" style="display: flex; justify-content: center;">
-            <div class="col-4 box3">
-                <img src="{% static 'wordcom_1.png' %}" alt="">
-                <p><a
-                        href="https://chrome.google.com/webstore/detail/office-editing-for-docs-s/gbkeegbaiigmenfmjfclcdgdpimamgkj?hl=ko">Chrome
-                        확장 프로그램</a> 또는 앱을 사용하여 Microsoft Word 파일을 열고 수정하고 저장할 수 있습니다.</p>
-            </div>
-            <div class="col-4 box3">
-                <img src="{% static 'wordcom_2.png' %}" alt="">
-                <p>Word 파일을 Google 문서로, Google 문서를 Word 파일로 변환할 수 있습니다.</p>
-            </div>
-            <div class="col-4 box3">
-                <img src="{% static 'wordcom_3.png' %}" alt="">
-                <p>더 이상 파일 형식은 신경쓰지 마세요.</p>
-            </div>
-        </div>
-        <div class="col-1"></div>
-
-    </div>
-
-    <div class="s-row wordcom sm-wordcom d-block d-md-none">
-        <div class="col-12 box12">
-            <h2 class="headline">Word와 호환</h2>
-        </div>
-        <div class="col-12">
-            <div id="slide2">
-                <input type="radio" name="pos2" id="pos1_2" checked>
-                <input type="radio" name="pos2" id="pos2_2">
-                <input type="radio" name="pos2" id="pos3_2">
+            <div id="slide" class="d-inline-block d-md-none">
+                <input type="radio" name="pos" id="pos1" checked>
+                <input type="radio" name="pos" id="pos2">
+                <input type="radio" name="pos" id="pos3">
+                <input type="radio" name="pos" id="pos4">
                 <ul>
                     <li>
                         <div>
-                            <img src="{% static 'wordcom_1.png' %}" alt="">
-                            <p><a
-                                    href="https://chrome.google.com/webstore/detail/office-editing-for-docs-s/gbkeegbaiigmenfmjfclcdgdpimamgkj?hl=ko">Chrome
-                                    확장 프로그램</a> 또는 앱을 사용하여 Microsoft Word 파일을 열고 수정하고 저장할 수 있습니다.</p>
+                            <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfMTMg/MDAxNTY3NzU0NTAxMjI5.GVpO-6waTGmErqsUKiaVymjz5mNYMBjnnj1yYXeY4JYg.Oqwd7Rrz8_quvrryN1GQiun1oVOq0LUZT0qjKcplBTAg.PNG.2002airplane/together_slide_1.png?type=w773"
+                                 alt="">
+                            <div class="tab_title">다같이, 더많이</div>
+                            <div class="tab_content">
+                                Google 문서를 사용하면 모두가 함께, 한 문서에서 동시에 작업을 진행할 수 있습니다.
+                            </div>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <img src="{% static 'wordcom_2.png' %}" alt="">
-                            <p>Word 파일을 Google 문서로, Google 문서를 Word 파일로 변환할 수 있습니다.</p>
+                            <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfMTYx/MDAxNTY3NzU0NTEwMjI4.49pE4wb5baW9UbkCw5r1rEQdDZlzvGOSXREgRf87Vd8g.ffd8MG98w0qPUm77JZbqh8WJYRj_H-IhYWAPg9P41CUg.PNG.2002airplane/together_slide_2.png?type=w773"
+                                 alt="">
+                            <div class="tab_title">모든 사람과 공유</div>
+                            <div class="tab_content">
+                                공유를 클릭하면 지인, 학교 친구, 동료, 가족 등이 내가 공유한 문서를 보고 직접 문서를 수정하거나 제안할 수 있으며 나는 이 제안을 수락 또는 거부할 수
+                                있습니다.
+                            </div>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <img src="{% static 'wordcom_3.png' %}" alt="">
-                            <p>더 이상 파일 형식은 신경쓰지 마세요.</p>
+                            <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfNDAg/MDAxNTY3NzU0NTE2NjQz.HYI2l6-_MSR-8QuwEX9AsS_-Ap8nDLdOzP5AYaiXbIMg.ec1rBXV31VCubl7FBj9iW8kia8HF7VWWtMkFim_gfe0g.PNG.2002airplane/together_slide_3.png?type=w773"
+                                 alt="">
+                            <div class="tab_title">실시간 수정</div>
+                            <div class="tab_content">
+                                다른 사용자가 문서를 수정할 때 커서가 표시되어 무엇을 변경하고 어떤 텍스트를 강조표시하는지 확인할 수 있습니다.
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfNjcg/MDAxNTY3NzU0NTIzNjE5.sAJTo8aCz-FdOXcC8NtwTwOvWBqptfH0ME4-Mjgn-6Qg.DI9gH0vz-do902pULi19uz0fgvf5yAnhT1L6dLP4sNAg.PNG.2002airplane/together_slide_4.png?type=w773"
+                                 alt="">
+                            <div class="tab_title">채팅 및 댓글 달기</div>
+                            <div class="tab_content">
+                                문서 내에서 직접 다른 사용자와 채팅하거나, 댓글을 추가하고 '+'를 눌러 상대방의 이메일 주소를 입력하여 상대방에게 알림을 보낼 수 있습니다.
+                            </div>
                         </div>
                     </li>
                 </ul>
-                <p class="pos2">
-                    <label for="pos1_2"></label>
-                    <label for="pos2_2"></label>
-                    <label for="pos3_2"></label>
+                <p class="pos">
+                    <label for="pos1"></label>
+                    <label for="pos2"></label>
+                    <label for="pos3"></label>
+                    <label for="pos4"></label>
                 </p>
             </div>
-        </div>
-    </div>
 
-    <!-- 7번!!!!!!! -->
-    <div class="row mainrow-7">
-        <div class="wrapper-7-1">
-            <div class="wrapper-7-2">
-                <div class="block7-1">
-                    <div class="animation7">
-                        <img src="{% static 'pad.gif' %}" alt="">
+        </div>
+
+        <section class="row" id="section-5">
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                <div class="paper">
+                    <div class="line line-100"></div>
+                    <div class="line line-90"></div>
+                    <div class="line line-100"></div>
+                    <div class="line line-60"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="check-icon d-flex align-items-center justify-content-center"><i class="fas fa-check"></i>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 text-wrap">
+                <h2 class="title">'저장' 버튼은 이제 안녕</h2>
+                <p class="description">모든 변경사항이 입력 즉시 자동으로 저장될 뿐만 아니라 업데이트 기록을 통해 문서의 이전 버전을 날짜와 변경한 사용자 기준으로
+                    정렬하여
+                    확인할 수 있습니다.</p>
+            </div>
+
+        </section>
+
+        <!-- 6번 -->
+        <div class="row s-row wordcom d-none d-md-flex">
+            <div class="col-12 box12">
+                <h2 class="headline">Word와 호환</h2>
+            </div>
+
+            <div class="col-1"></div>
+            <div class="col-10" style="display: flex; justify-content: center;">
+                <div class="col-4 box3">
+                    <img src="{% static 'wordcom_1.png' %}" alt="">
+                    <p><a
+                            href="https://chrome.google.com/webstore/detail/office-editing-for-docs-s/gbkeegbaiigmenfmjfclcdgdpimamgkj?hl=ko">Chrome
+                        확장 프로그램</a> 또는 앱을 사용하여 Microsoft Word 파일을 열고 수정하고 저장할 수 있습니다.</p>
+                </div>
+                <div class="col-4 box3">
+                    <img src="{% static 'wordcom_2.png' %}" alt="">
+                    <p>Word 파일을 Google 문서로, Google 문서를 Word 파일로 변환할 수 있습니다.</p>
+                </div>
+                <div class="col-4 box3">
+                    <img src="{% static 'wordcom_3.png' %}" alt="">
+                    <p>더 이상 파일 형식은 신경쓰지 마세요.</p>
+                </div>
+            </div>
+            <div class="col-1"></div>
+
+        </div>
+
+        <div class="s-row wordcom sm-wordcom d-block d-md-none">
+            <div class="col-12 box12">
+                <h2 class="headline">Word와 호환</h2>
+            </div>
+            <div class="col-12">
+                <div id="slide2">
+                    <input type="radio" name="pos2" id="pos1_2" checked>
+                    <input type="radio" name="pos2" id="pos2_2">
+                    <input type="radio" name="pos2" id="pos3_2">
+                    <ul>
+                        <li>
+                            <div>
+                                <img src="{% static 'wordcom_1.png' %}" alt="">
+                                <p><a
+                                        href="https://chrome.google.com/webstore/detail/office-editing-for-docs-s/gbkeegbaiigmenfmjfclcdgdpimamgkj?hl=ko">Chrome
+                                    확장 프로그램</a> 또는 앱을 사용하여 Microsoft Word 파일을 열고 수정하고 저장할 수 있습니다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="{% static 'wordcom_2.png' %}" alt="">
+                                <p>Word 파일을 Google 문서로, Google 문서를 Word 파일로 변환할 수 있습니다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="{% static 'wordcom_3.png' %}" alt="">
+                                <p>더 이상 파일 형식은 신경쓰지 마세요.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="pos2">
+                        <label for="pos1_2"></label>
+                        <label for="pos2_2"></label>
+                        <label for="pos3_2"></label>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7번!!!!!!! -->
+        <div class="row mainrow-7">
+            <div class="wrapper-7-1">
+                <div class="wrapper-7-2">
+                    <div class="block7-1">
+                        <div class="animation7">
+                            <img src="{% static 'pad.gif' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="block7-2">
+                        <h2 class="font7-1">원하는 모든 정보를 문서에서 바로 검색하세요.</h2>
+                        <p class="font7-2">Android 앱을 종료하지 않고<br> Google 검색에서 이미지, 인용문, 텍스트를 탐색하고 영감을 얻어보세요.</p>
+                        <a class="btn-custom7-2"
+                           href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&hl=ko"><span>Android용
+                            문서 다운로드</span></a>
                     </div>
                 </div>
-                <div class="block7-2">
-                    <h2 class="font7-1">원하는 모든 정보를 문서에서 바로 검색하세요.</h2>
-                    <p class="font7-2">Android 앱을 종료하지 않고<br> Google 검색에서 이미지, 인용문, 텍스트를 탐색하고 영감을 얻어보세요.</p>
-                    <a class="btn-custom7-2"
-                        href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&hl=ko"><span>Android용
-                            문서 다운로드</span></a>
-                </div>
             </div>
         </div>
-    </div>
-    <!-- 8번!!!!!! -->
-    <div class="row mainrow-8">
-        <div class="wrapper-8">
-            <div class="block8-1">
-                <div class="row">
-                    <p class="font8-1">부가기능으로 더 세련되게</p>
-                </div>
-                <div class="row">
-                    <p class="font8-2">
-                        부가기능으로 더 멋진 문서를 만들 수 있습니다. <a
-                            href="https://chrome.google.com/webstore/detail/avery-label-merge/onacejilpbdgdhhoijnggpjolbdajepo">
+        <!-- 8번!!!!!! -->
+        <div class="row mainrow-8">
+            <div class="wrapper-8">
+                <div class="block8-1">
+                    <div class="row">
+                        <p class="font8-1">부가기능으로 더 세련되게</p>
+                    </div>
+                    <div class="row">
+                        <p class="font8-2">
+                            부가기능으로 더 멋진 문서를 만들 수 있습니다. <a
+                                href="https://chrome.google.com/webstore/detail/avery-label-merge/onacejilpbdgdhhoijnggpjolbdajepo">
                             Avery Label Merge</a>로 라벨과 이름 태그를 만들고 인쇄해 보세요.
-                    </p>
+                        </p>
 
+                    </div>
+                    <div class="row">
+                        <a class="font8-3" href="https://docs.google.com/document/create?addon_store">다른 부가기능 살펴보기
+                            <i class="material-icons">keyboard_arrow_right</i></a>
+                    </div>
                 </div>
-                <div class="row">
-                    <a class="font8-3" href="https://docs.google.com/document/create?addon_store">다른 부가기능 살펴보기
-                        <i class="material-icons">keyboard_arrow_right</i></a>
+                <div class="block8-2">
+                    <img class="img-3 img-8" src="https://www.google.com/intl/ko_KR/docs/about/images/docs/addons.png"
+                         alt="">
                 </div>
-            </div>
-            <div class="block8-2">
-                <img class="img-3 img-8" src="https://www.google.com/intl/ko_KR/docs/about/images/docs/addons.png"
-                    alt="">
             </div>
         </div>
-    </div>
 
-    <section class="row" id="section-9">
-        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
-            <div class="image-part">
+        <section class="row" id="section-9">
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                <div class="image-part">
+                </div>
             </div>
-        </div>
-        <div class="col-12 col-md-6 text-wrap">
-            <h2 class="title">지금 시작하세요</h2>
-            <p class="description">Google 문서는 언제든지 시작할 수 있습니다. 브라우저에서 문서를 만들거나 휴대기기용 앱을 다운로드 하세요.</p>
+            <div class="col-12 col-md-6 text-wrap">
+                <h2 class="title">지금 시작하세요</h2>
+                <p class="description">Google 문서는 언제든지 시작할 수 있습니다. 브라우저에서 문서를 만들거나 휴대기기용 앱을 다운로드 하세요.</p>
                 <a class="btn-custom-2"
-                    href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Dwebsite%26utm_content%3Dmobilebutton%26utm_campaign%3Ddocswebsite&hl=ko"><span
+                   href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Dwebsite%26utm_content%3Dmobilebutton%26utm_campaign%3Ddocswebsite&hl=ko"><span
                         class="font3-4">Google 문서 다운로드</span></a>
                 <div class="dropdown">
                     <button id="change" class="btn-custom-1 btn btn-primary dropdown-toggle" type="button"
-                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <change-title class="font3-3">앱다운로드</change-title>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item"
-                            href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Ddocs_mkt%26utm_medium%3Dmobile_section%26utm_campaign%3Ddocs_mkt">Android용
+                           href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Ddocs_mkt%26utm_medium%3Dmobile_section%26utm_campaign%3Ddocs_mkt">Android용
                             문서 다운로드</a>
                         <a class="dropdown-item" href="https://apps.apple.com/app/apple-store/id842842640">iPhon/iPad용
                             문서 다운로드</a>
                     </div>
                 </div>
+            </div>
+        </section>
+    </div>
+    <div class="footer-wrap">
+        <div class="footer">
+            <div class="footer-follow">
+                팔로우: &nbsp;
+                <img src="{% static 'img/footer_facebook_2x.png' %}">
+                <img class="twitter" src="{% static 'img/footer_twitter_2x.png' %}">
+                <img src="{% static 'img/footer_blogger_2x.jpg' %}">
+                <img src="{% static 'img/footer_youtube_2x.png' %}">
+            </div>
+            <hr/>
+            <div class="footer-elements">
+                <div class="footer-elements-element">
+                    <p class="footer-elements-element-title">Google 문서 정보</p><br/>
+                    <p class="footer-elements-element-content"><a href="">Google 문서</a></p>
+                    <p class="footer-elements-element-content"><a href="">Google 스프레드시트</a></p>
+                    <p class="footer-elements-element-content"><a href="">Google 프레젠테이션</a></p>
+                    <p class="footer-elements-element-content"><a href="">Google 설문지</a></p>
+                </div>
+                <div class="footer-elements-element">
+                    <p class="footer-elements-element-title">다운로드 및 더보기</p><br/>
+                    <p class="footer-elements-element-content"><a href="">Android용 문서</a></p>
+                    <p class="footer-elements-element-content"><a href="">Android용 스프레드시트</a></p>
+                    <p class="footer-elements-element-content"><a href="">Android용 프레젠테이션</a></p>
+                    <p class="footer-elements-element-content"><a href="">iPhone 및 iPad용 문서</a></p>
+                    <p class="footer-elements-element-content"><a href="">iPhone 및 iPad용 스프레드시트</a></p>
+                    <p class="footer-elements-element-content"><a href="">iPhone 및 iPad용 프레젠테이션</a></p>
+                    <p class="footer-elements-element-content"><a href="">문서, 스프레드시트, 프레젠테이션에서
+                        Office파일<br/>수정</a></p>
+                    <p class="footer-elements-element-content"><a href="">문서용 부가기능</a></p>
+                    <p class="footer-elements-element-content"><a href="">스프레드시트용 부가기능</a></p>
+                    <p class="footer-elements-element-content"><a href="">설문지용 부가기능</a></p>
+                </div>
+                <div class="footer-elements-element">
+                    <p class="footer-elements-element-title">지원</p><br/>
+                    <p class="footer-elements-element-content"><a href="">문서 도움말 센터</a></p>
+                    <p class="footer-elements-element-content"><a href="">Goolge 문서 포럼</a></p>
+                </div>
+                <div class="footer-elements-element">
+                    <p class="footer-elements-element-title">관련 솔루션</p><br/>
+                    <p class="footer-elements-element-content"><a href=""> Google 드라이브</a></p>
+                    <p class="footer-elements-element-content"><a href="">Google Cloud Platform</a></p>
+                    <p class="footer-elements-element-content"><a href="">G Suite</a></p>
+                    <p class="footer-elements-element-content"><a href="">Google Apps for Education</a>
+                    </p>
+                    <p class="footer-elements-element-content"><a href="">Google Apps for Government</a>
+                    </p>
+                    <p class="footer-elements-element-content"><a href="">Google 비즈니스 솔루션</a></p>
+                </div>
+            </div>
         </div>
 
-    </section>
+        <div class="footer-footer-wrapper">
+            <div class="footer-footer footer-elements-element-content">
+                <a href="">Google · </a>
+                <a href="">개인정보 보호 · </a>
+                <a href="">약관</a>
+            </div>
+        </div>
+
+    </div>
 </div>
+
+<script type="text/Javascript" src="{% static 'js/docs.js'%}"></script>
+
 <script>
     $(window).ready(function () {
 
@@ -380,17 +530,17 @@
 
             if (scrollPX < max) {
 
-                $(".section-wraper-1").css({ "opacity": (max - scrollPX) / max });
+                $(".section-wraper-1").css({"opacity": (max - scrollPX) / max});
 
             } else {
 
-                $(".section-wraper-1").css({ "opacity": 0 });
+                $(".section-wraper-1").css({"opacity": 0});
 
             }
 
         });
 
-    }); 
+    });
 </script>
 
 <script>
