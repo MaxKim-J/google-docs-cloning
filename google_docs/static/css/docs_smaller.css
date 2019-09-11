@@ -115,13 +115,8 @@
     }
     
     .section-main-list-content > a{
-<<<<<<< HEAD
-        position: relative;
-        top: 10px;
-=======
         position:relative;
         top:20px;
->>>>>>> rowcomplete
         font-size: 25px;
     }
 
