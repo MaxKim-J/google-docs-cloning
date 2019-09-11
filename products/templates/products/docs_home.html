@@ -152,6 +152,7 @@
                             불어넣어
                             보세요. 수백 가지의 글꼴 중에 마음에 드는 것을 선택하고, 링크, 이미지, 그림을 자유롭게 추가할 수 있습니다. 물론, 이 모든 게 무료입니다.</p>
                     </div>
+                    <hr class="m-0 p-0">
                 </div>
             </div>
         </div>
@@ -249,8 +250,7 @@
                 <ul>
                     <li>
                         <div>
-                            <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfMTMg/MDAxNTY3NzU0NTAxMjI5.GVpO-6waTGmErqsUKiaVymjz5mNYMBjnnj1yYXeY4JYg.Oqwd7Rrz8_quvrryN1GQiun1oVOq0LUZT0qjKcplBTAg.PNG.2002airplane/together_slide_1.png?type=w773"
-                                alt="">
+                            <img src="{% static 'together_slide_1.png' %}">
                             <div class="tab_title">다같이, 더많이</div>
                             <div class="tab_content">
                                 Google 문서를 사용하면 모두가 함께, 한 문서에서 동시에 작업을 진행할 수 있습니다.
@@ -259,8 +259,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfMTYx/MDAxNTY3NzU0NTEwMjI4.49pE4wb5baW9UbkCw5r1rEQdDZlzvGOSXREgRf87Vd8g.ffd8MG98w0qPUm77JZbqh8WJYRj_H-IhYWAPg9P41CUg.PNG.2002airplane/together_slide_2.png?type=w773"
-                                alt="">
+                            <img src="{% static 'together_slide_2.png' %}">
                             <div class="tab_title">모든 사람과 공유</div>
                             <div class="tab_content">
                                 공유를 클릭하면 지인, 학교 친구, 동료, 가족 등이 내가 공유한 문서를 보고 직접 문서를 수정하거나 제안할 수 있으며 나는 이 제안을 수락 또는 거부할 수
@@ -270,8 +269,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfNDAg/MDAxNTY3NzU0NTE2NjQz.HYI2l6-_MSR-8QuwEX9AsS_-Ap8nDLdOzP5AYaiXbIMg.ec1rBXV31VCubl7FBj9iW8kia8HF7VWWtMkFim_gfe0g.PNG.2002airplane/together_slide_3.png?type=w773"
-                                alt="">
+                            <img src="{% static 'together_slide_3.png' %}">
                             <div class="tab_title">실시간 수정</div>
                             <div class="tab_content">
                                 다른 사용자가 문서를 수정할 때 커서가 표시되어 무엇을 변경하고 어떤 텍스트를 강조표시하는지 확인할 수 있습니다.
@@ -280,8 +278,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfNjcg/MDAxNTY3NzU0NTIzNjE5.sAJTo8aCz-FdOXcC8NtwTwOvWBqptfH0ME4-Mjgn-6Qg.DI9gH0vz-do902pULi19uz0fgvf5yAnhT1L6dLP4sNAg.PNG.2002airplane/together_slide_4.png?type=w773"
-                                alt="">
+                            <img src="{% static 'together_slide_4.png' %}">
                             <div class="tab_title">채팅 및 댓글 달기</div>
                             <div class="tab_content">
                                 문서 내에서 직접 다른 사용자와 채팅하거나, 댓글을 추가하고 '+'를 눌러 상대방의 이메일 주소를 입력하여 상대방에게 알림을 보낼 수 있습니다.
@@ -298,7 +295,6 @@
             </div>
 
         </div>
-
         <section class="row" id="section-5">
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
                 <div class="paper">
@@ -550,18 +546,6 @@
     });
 </script>
 
-<script>
-    if ('registerElement' in document
-        && 'createShadowRoot' in HTMLElement.prototype
-        && 'import' in document.createElement('link')
-        && 'content' in document.createElement('template')) {
-        // We're using a browser with native WC support!
-    } else {
-        document.write('<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/polymer/0.3.4/platform.js"><\/script>')
-    }
-</script>
-
-<link rel="import" href="x-gif.html">
 
 <script>
     $(function () {
