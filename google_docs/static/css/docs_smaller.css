@@ -44,8 +44,8 @@
         display: none;
         border-left: 0.5px solid #ededed;
     }
-    
-    
+
+
     #spread:hover + #spreadColor {
         background-color: #21A565;
     }
@@ -98,10 +98,10 @@
         background-color: #e5e5e5;
         display: none;
         position: fixed;
-        top:70px;
-        height: 100%;
         width:100%;
-        padding: 20px 0px;
+        height: 890px;
+        top:70px;
+        padding: 15px 0px;
     }
     
     .section-main-list-content{
@@ -115,22 +115,31 @@
     }
     
     .section-main-list-content > a{
+<<<<<<< HEAD
         position: relative;
         top: 10px;
+=======
+        position:relative;
+        top:20px;
+>>>>>>> rowcomplete
         font-size: 25px;
     }
 
-    /* footer */
-    
-    p {
-        color: black;
+    .section-main-list-content > a:link{
+        text-decoration: none;
+        color: grey;
     }
-    
-    .footer-wrap {
-        background-color:  #ededed;
-        text-align: left;
-    
+
+    .section-main-list-content > a:visited{
+        text-decoration: none;
+        color: grey;
     }
+
+    .section-main-list-content > a:hover{
+        text-decoration: none;
+        color: grey;
+    }
+
     
     /* footer */
 
