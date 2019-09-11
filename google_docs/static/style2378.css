@@ -416,7 +416,7 @@
         color: white;   
     }
     .mainrow-2 {
-        height: 421px;
+        height: 30%;
         padding: 40px 0;
         background-color: #FFFFFF;
         display: flex;
@@ -444,7 +444,8 @@
         display: block;
     }
     .animation2 {
-        float: right;
+        display:flex;
+        justify-content: center;
     }
 
     .animation2 img {
@@ -460,6 +461,7 @@
         letter-spacing: 100%;
         font-size: 24px;
         text-align: center;
+        margin-top: 20px;
     }
     .font2-2 {
         color:#555555; font-size: 16px;
