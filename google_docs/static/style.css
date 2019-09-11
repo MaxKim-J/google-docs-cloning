@@ -98,6 +98,28 @@ body {
 #section-1 .arrow .fa-chevron-down {
     color : white;
     font-size : 25px;
+    animation-duration: 2s;
+    animation-name: arrow-move;
+    animation-iteration-count : infinite;
+}
+
+
+
+@keyframes arrow-move {
+0% {
+    margin-top: -50px;
+    opacity: 1;
+}
+
+50% {
+    margin-top: -50px;
+    opacity: 1;
+}
+
+100% {
+    margin-top: 50px;
+    opacity: 0;
+}
 }
 
 
@@ -147,12 +169,22 @@ body {
 #section-5 .paper .line-60 {
     width : 60%;
     display : inline-block;
+    animation-duration: 1.5s;
+    animation-name: line-slide;
+}
+
+@keyframes line-slide {
+0% {
+    width: 0px;
+}
+100% {
+    width : 60%;
+}
 }
 
 #section-5 .bar {
     width : 2px;
     height : 24px;
-    margin-left : 5px;
     background-color : #000000;
     display : inline-block;
     position : relative;
@@ -169,7 +201,21 @@ body {
     position : relative;
     right : 269px;
     top : 113px;
+    animation-delay: 1.5s;
+    animation-duration: 0.01s;
+    animation-name: check-show;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
+
+@keyframes check-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    }
 
 #section-9 .image-part {
     width : 50vw;
