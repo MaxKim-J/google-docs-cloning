@@ -3,6 +3,7 @@
 {% block content %}
 {% load static %}
 
+
 <div class=header>
     <div class="header-logo">
         <img src="{% static 'img/Screenshot from 2019-09-09 20-27-02.png' %}">
@@ -58,37 +59,38 @@
             <img src="https://www.google.com/images/about/docs-icon.svg">&nbsp;
             <a href="#">문서</a>
         </div>
-        <hr/>
+        <hr />
         <div class="section-main-list-content">
             <img src="https://www.google.com/images/about/sheets-icon.svg">&nbsp;
             <a href="#">스프레드시트</a>
         </div>
-        <hr/>
+        <hr />
         <div class="section-main-list-content">
             <img src="https://www.google.com/images/about/slides-icon.svg">&nbsp;
             <a href="#">프레젠테이션</a>
         </div>
-        <hr/>
+        <hr />
         <div class="section-main-list-content">
             <img src="https://www.google.com/images/about/forms-icon.svg">&nbsp;
             <a href="#">설문지</a>
         </div>
-        <hr/>
+        <hr />
         <div class="section-main-list-content">
             <a href="#">기업용</a>
         </div>
-        <hr/>
+        <hr />
         <div class="section-main-list-content">
             <a href="#">도움말</a>
         </div>
-        <hr/>
+        <hr />
     </div>
 </div>
 
 
 <div class="wrap-js">
     <div class="container-fluid m-0 p-0">
-        <section class="row m-0" id="section-1">
+        <section class="row m-0 window-section-1" data-parallax="scroll"
+            data-image-src="https://www.google.com/intl/ko_KR/docs/about//images/docs/banner-1600.jpg"" id="section-1">
             <div class="col-12 p-0 d-flex align-items-center justify-content-center">
                 <div class="section-wraper-1">
                     <div class="row">
@@ -165,27 +167,27 @@
                     </div>
                     <div class="row l-10">
                         <a class="btn-custom-2"
-                           href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Dwebsite%26utm_content%3Dmobilebutton%26utm_campaign%3Ddocswebsite&hl=ko"><span
+                            href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Dwebsite%26utm_content%3Dmobilebutton%26utm_campaign%3Ddocswebsite&hl=ko"><span
                                 class="font3-4">Google 문서 다운로드</span></a>
                         <div class="dropdown">
                             <button id="change" class="btn-custom-1 btn btn-primary dropdown-toggle" type="button"
-                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
                                 <change-title class="font3-3">앱다운로드</change-title>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item"
-                                   href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Ddocs_mkt%26utm_medium%3Dmobile_section%26utm_campaign%3Ddocs_mkt">Android용
+                                    href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Ddocs_mkt%26utm_medium%3Dmobile_section%26utm_campaign%3Ddocs_mkt">Android용
                                     문서 다운로드</a>
                                 <a class="dropdown-item"
-                                   href="https://apps.apple.com/app/apple-store/id842842640">iPhon/iPad용 문서 다운로드</a>
+                                    href="https://apps.apple.com/app/apple-store/id842842640">iPhon/iPad용 문서 다운로드</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="block3-2">
                     <img class="img-3 " src="https://www.google.com/intl/ko_KR/docs/about/images/en/download.png"
-                         alt="">
+                        alt="">
                 </div>
             </div>
         </div>
@@ -248,7 +250,7 @@
                     <li>
                         <div>
                             <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfMTMg/MDAxNTY3NzU0NTAxMjI5.GVpO-6waTGmErqsUKiaVymjz5mNYMBjnnj1yYXeY4JYg.Oqwd7Rrz8_quvrryN1GQiun1oVOq0LUZT0qjKcplBTAg.PNG.2002airplane/together_slide_1.png?type=w773"
-                                 alt="">
+                                alt="">
                             <div class="tab_title">다같이, 더많이</div>
                             <div class="tab_content">
                                 Google 문서를 사용하면 모두가 함께, 한 문서에서 동시에 작업을 진행할 수 있습니다.
@@ -258,7 +260,7 @@
                     <li>
                         <div>
                             <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfMTYx/MDAxNTY3NzU0NTEwMjI4.49pE4wb5baW9UbkCw5r1rEQdDZlzvGOSXREgRf87Vd8g.ffd8MG98w0qPUm77JZbqh8WJYRj_H-IhYWAPg9P41CUg.PNG.2002airplane/together_slide_2.png?type=w773"
-                                 alt="">
+                                alt="">
                             <div class="tab_title">모든 사람과 공유</div>
                             <div class="tab_content">
                                 공유를 클릭하면 지인, 학교 친구, 동료, 가족 등이 내가 공유한 문서를 보고 직접 문서를 수정하거나 제안할 수 있으며 나는 이 제안을 수락 또는 거부할 수
@@ -269,7 +271,7 @@
                     <li>
                         <div>
                             <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfNDAg/MDAxNTY3NzU0NTE2NjQz.HYI2l6-_MSR-8QuwEX9AsS_-Ap8nDLdOzP5AYaiXbIMg.ec1rBXV31VCubl7FBj9iW8kia8HF7VWWtMkFim_gfe0g.PNG.2002airplane/together_slide_3.png?type=w773"
-                                 alt="">
+                                alt="">
                             <div class="tab_title">실시간 수정</div>
                             <div class="tab_content">
                                 다른 사용자가 문서를 수정할 때 커서가 표시되어 무엇을 변경하고 어떤 텍스트를 강조표시하는지 확인할 수 있습니다.
@@ -279,7 +281,7 @@
                     <li>
                         <div>
                             <img src="https://postfiles.pstatic.net/MjAxOTA5MDZfNjcg/MDAxNTY3NzU0NTIzNjE5.sAJTo8aCz-FdOXcC8NtwTwOvWBqptfH0ME4-Mjgn-6Qg.DI9gH0vz-do902pULi19uz0fgvf5yAnhT1L6dLP4sNAg.PNG.2002airplane/together_slide_4.png?type=w773"
-                                 alt="">
+                                alt="">
                             <div class="tab_title">채팅 및 댓글 달기</div>
                             <div class="tab_content">
                                 문서 내에서 직접 다른 사용자와 채팅하거나, 댓글을 추가하고 '+'를 눌러 상대방의 이메일 주소를 입력하여 상대방에게 알림을 보낼 수 있습니다.
@@ -330,7 +332,7 @@
                     <img src="{% static 'wordcom_1.png' %}" alt="">
                     <p><a
                             href="https://chrome.google.com/webstore/detail/office-editing-for-docs-s/gbkeegbaiigmenfmjfclcdgdpimamgkj?hl=ko">Chrome
-                        확장 프로그램</a> 또는 앱을 사용하여 Microsoft Word 파일을 열고 수정하고 저장할 수 있습니다.</p>
+                            확장 프로그램</a> 또는 앱을 사용하여 Microsoft Word 파일을 열고 수정하고 저장할 수 있습니다.</p>
                 </div>
                 <div class="col-4 box3">
                     <img src="{% static 'wordcom_2.png' %}" alt="">
@@ -360,7 +362,7 @@
                                 <img src="{% static 'wordcom_1.png' %}" alt="">
                                 <p><a
                                         href="https://chrome.google.com/webstore/detail/office-editing-for-docs-s/gbkeegbaiigmenfmjfclcdgdpimamgkj?hl=ko">Chrome
-                                    확장 프로그램</a> 또는 앱을 사용하여 Microsoft Word 파일을 열고 수정하고 저장할 수 있습니다.</p>
+                                        확장 프로그램</a> 또는 앱을 사용하여 Microsoft Word 파일을 열고 수정하고 저장할 수 있습니다.</p>
                             </div>
                         </li>
                         <li>
@@ -398,8 +400,8 @@
                         <h2 class="font7-1">원하는 모든 정보를 문서에서 바로 검색하세요.</h2>
                         <p class="font7-2">Android 앱을 종료하지 않고<br> Google 검색에서 이미지, 인용문, 텍스트를 탐색하고 영감을 얻어보세요.</p>
                         <a class="btn-custom7-2"
-                           href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&hl=ko"><span>Android용
-                            문서 다운로드</span></a>
+                            href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&hl=ko"><span>Android용
+                                문서 다운로드</span></a>
                     </div>
                 </div>
             </div>
@@ -415,7 +417,7 @@
                         <p class="font8-2">
                             부가기능으로 더 멋진 문서를 만들 수 있습니다. <a
                                 href="https://chrome.google.com/webstore/detail/avery-label-merge/onacejilpbdgdhhoijnggpjolbdajepo">
-                            Avery Label Merge</a>로 라벨과 이름 태그를 만들고 인쇄해 보세요.
+                                Avery Label Merge</a>로 라벨과 이름 태그를 만들고 인쇄해 보세요.
                         </p>
 
                     </div>
@@ -426,7 +428,7 @@
                 </div>
                 <div class="block8-2">
                     <img class="img-3 img-8" src="https://www.google.com/intl/ko_KR/docs/about/images/docs/addons.png"
-                         alt="">
+                        alt="">
                 </div>
             </div>
         </div>
@@ -440,16 +442,16 @@
                 <h2 class="title">지금 시작하세요</h2>
                 <p class="description">Google 문서는 언제든지 시작할 수 있습니다. 브라우저에서 문서를 만들거나 휴대기기용 앱을 다운로드 하세요.</p>
                 <a class="btn-custom-2"
-                   href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Dwebsite%26utm_content%3Dmobilebutton%26utm_campaign%3Ddocswebsite&hl=ko"><span
+                    href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Dwebsite%26utm_content%3Dmobilebutton%26utm_campaign%3Ddocswebsite&hl=ko"><span
                         class="font3-4">Google 문서 다운로드</span></a>
                 <div class="dropdown">
                     <button id="change" class="btn-custom-1 btn btn-primary dropdown-toggle" type="button"
-                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <change-title class="font3-3">앱다운로드</change-title>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item"
-                           href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Ddocs_mkt%26utm_medium%3Dmobile_section%26utm_campaign%3Ddocs_mkt">Android용
+                            href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&referrer=utm_source%3Ddocs_mkt%26utm_medium%3Dmobile_section%26utm_campaign%3Ddocs_mkt">Android용
                             문서 다운로드</a>
                         <a class="dropdown-item" href="https://apps.apple.com/app/apple-store/id842842640">iPhon/iPad용
                             문서 다운로드</a>
@@ -467,17 +469,17 @@
                 <img src="{% static 'img/footer_blogger_2x.jpg' %}">
                 <img src="{% static 'img/footer_youtube_2x.png' %}">
             </div>
-            <hr/>
+            <hr />
             <div class="footer-elements">
                 <div class="footer-elements-element">
-                    <p class="footer-elements-element-title">Google 문서 정보</p><br/>
+                    <p class="footer-elements-element-title">Google 문서 정보</p><br />
                     <p class="footer-elements-element-content"><a href="">Google 문서</a></p>
                     <p class="footer-elements-element-content"><a href="">Google 스프레드시트</a></p>
                     <p class="footer-elements-element-content"><a href="">Google 프레젠테이션</a></p>
                     <p class="footer-elements-element-content"><a href="">Google 설문지</a></p>
                 </div>
                 <div class="footer-elements-element">
-                    <p class="footer-elements-element-title">다운로드 및 더보기</p><br/>
+                    <p class="footer-elements-element-title">다운로드 및 더보기</p><br />
                     <p class="footer-elements-element-content"><a href="">Android용 문서</a></p>
                     <p class="footer-elements-element-content"><a href="">Android용 스프레드시트</a></p>
                     <p class="footer-elements-element-content"><a href="">Android용 프레젠테이션</a></p>
@@ -485,18 +487,18 @@
                     <p class="footer-elements-element-content"><a href="">iPhone 및 iPad용 스프레드시트</a></p>
                     <p class="footer-elements-element-content"><a href="">iPhone 및 iPad용 프레젠테이션</a></p>
                     <p class="footer-elements-element-content"><a href="">문서, 스프레드시트, 프레젠테이션에서
-                        Office파일<br/>수정</a></p>
+                            Office파일<br />수정</a></p>
                     <p class="footer-elements-element-content"><a href="">문서용 부가기능</a></p>
                     <p class="footer-elements-element-content"><a href="">스프레드시트용 부가기능</a></p>
                     <p class="footer-elements-element-content"><a href="">설문지용 부가기능</a></p>
                 </div>
                 <div class="footer-elements-element">
-                    <p class="footer-elements-element-title">지원</p><br/>
+                    <p class="footer-elements-element-title">지원</p><br />
                     <p class="footer-elements-element-content"><a href="">문서 도움말 센터</a></p>
                     <p class="footer-elements-element-content"><a href="">Goolge 문서 포럼</a></p>
                 </div>
                 <div class="footer-elements-element">
-                    <p class="footer-elements-element-title">관련 솔루션</p><br/>
+                    <p class="footer-elements-element-title">관련 솔루션</p><br />
                     <p class="footer-elements-element-content"><a href=""> Google 드라이브</a></p>
                     <p class="footer-elements-element-content"><a href="">Google Cloud Platform</a></p>
                     <p class="footer-elements-element-content"><a href="">G Suite</a></p>
@@ -523,7 +525,7 @@
 <script type="text/Javascript" src="{% static 'js/docs.js'%}"></script>
 
 <script>
-    $('.window-section-1').parallax({imageSrc: 'https://www.google.com/intl/ko_KR/docs/about//images/docs/banner-1600.jpg'});
+    $('.window-section-1').parallax({ imageSrc: 'https://www.google.com/intl/ko_KR/docs/about//images/docs/banner-1600.jpg' });
 
     $(window).ready(function () {
 
@@ -535,11 +537,11 @@
 
             if (scrollPX < max) {
 
-                $(".section-wraper-1").css({"opacity": (max - scrollPX) / max});
+                $(".section-wraper-1").css({ "opacity": (max - scrollPX) / max });
 
             } else {
 
-                $(".section-wraper-1").css({"opacity": 0});
+                $(".section-wraper-1").css({ "opacity": 0 });
 
             }
 

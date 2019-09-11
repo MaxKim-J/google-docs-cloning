@@ -170,6 +170,10 @@
         align-items: flex-start;
         
     }
+    
+    .btn-custom7-2:visited, .btn-custom7-2:link {
+        color : white !important;
+    }
 
     .wrapper-2-1 {
         width: 100%;
