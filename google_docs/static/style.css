@@ -1,3 +1,6 @@
+body {
+}
+
 #section-1 {
     width : 100%;
     height : 100vh;
@@ -100,9 +103,12 @@
 #section-5 {
     margin : 0 54.4px;
     padding : 85px 20px;
+    display: flex;
+    flex-direction: row-reverse;
 }
 #section-5 .text-wrap {
     padding : 0 30px;
+    justify-items: center;
 }
 #section-5 .title {
     font-size : 48px;
@@ -112,6 +118,7 @@
 #section-5 .description {
     font-size : 21px;
     font-weight : 300;
+    color : #555555;
 }
 
 #section-5 .paper {
@@ -160,6 +167,34 @@
     top : 113px;
 }
 
+#section-9 .image-part {
+    width : 50vw;
+    height : 100%;
+    object-fit: fill;
+    background: url(https://www.google.com/intl/ko_KR/docs/about/images/en/devices_2x.png) center no-repeat;
+    background-size: 950px;
+    background-position: 100%;
+}
+
+#section-9 .text-wrap {
+    margin : 200px 0px 20px 0px;
+    padding-right : 15%;
+    padding-top : 30px;
+    padding-bottom : 130px;
+}
+
+#section-9 .title {
+    font-size : 48px;
+    color : #4C4C4C;
+    font-weight : 300;
+}
+
+#section-9 .description {
+    font-size : 21px;
+    color : #555555;
+    font-weight : 300;
+}
+
 @media (max-width: 1216px) {
     .home-main-row .title {
         font-size: 50px;
@@ -175,7 +210,13 @@
     }
      .name_tag {
          right : 18%;
-     }
+    }
+    #section-5 {
+        margin : 0;
+    }
+    #section-5 .text-wrap {
+        padding : 0;
+    }
  }
 
  @media (max-width: 768px){
@@ -192,6 +233,71 @@
         text-shadow: 0 2px 3px rgba(0,0,0,.2);
         letter-spacing: -1px;
         font-weight : 300;
+    }
+    
+    #section-5 {
+        margin : 0;
+        padding : 40px 30px;
+    }
+    #section-5 .title {
+        font-size : 24px;
+        margin-top : 20px;
+        text-align: center;
+    }
+    
+    #section-5 .description {
+        font-size : 16px;
+        text-align: center;
+    }
+    #section-5 .paper {
+        padding : 30px 20px;
+        margin-bottom : 20px;
+        width : 140px;
+        height : 130px;
+    }
+    #section-5 .paper .line {
+        height : 12px;
+        margin-bottom : 10px;
+    }
+    #section-5 .bar {
+        width : 1.5px;
+        height : 16px;
+        margin-left : -2px;
+        background-color : #000000;
+        bottom : 8px;
+    }
+    #section-5 .check-icon {
+        width : 25px;
+        height : 25px;
+        font-size : 18px;
+        right : 155px;
+        top : 65px;
+    }
+
+    #section-9 {
+        padding : 40px 30px;
+    }
+
+    #section-9 .image-part {
+        height : 188px;
+        background-size: 188px;
+        background-position: center;
+    }
+
+    #section-9 .text-wrap {
+        padding : 0;
+        margin : 20px 0px 0px;
+    } 
+
+    #section-9 .title {
+        text-align : center;
+        font-size : 24px;
+    }
+
+    #section-9 .description {
+        text-align : center;
+        font-size : 16px;
+        margin-bottom : 35px;
     }
  }
 
